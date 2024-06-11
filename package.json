@@ -11,8 +11,10 @@
     "axios": "^1.7.2",
     "core-js": "^3.6.5",
     "element-ui": "^2.4.5",
+    "less": "^4.2.0",
+    "less-loader": "^7.3.0",
     "vue": "^2.6.11",
-    "vue-router": "^4.3.2"
+    "vue-router": "^3.6.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.17",
