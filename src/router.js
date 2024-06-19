@@ -1,18 +1,31 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Login from "./components/Login.vue";
-import Home from "./components/Home.vue";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Login from './components/Login.vue'
+import Home from './components/Home.vue'
+import Welcome from './components/Welcome.vue'
+import Users from './components/user/Users.vue'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
+
 // 需要拿到一个路由对象挂载导航守卫
 const router = new VueRouter({
   routes: [
     // 只要访问根路径就重定向到login
-    { path: "/", redirect: "/login" },
-    { path: "/login", component: Login },
-    { path: "/home", component: Home },
+    { path: '/', redirect: '/login' },
+    { path: '/login', component: Login },
+    // Welcome嵌套在Home页面中,children[]放子路由
+    // 只要访问Home地址，就重定向访问到welcome地址
+    {
+      path: '/home',
+      component: Home,
+      redirect: '/welcome',
+      children: [
+        { path: '/welcome', component: Welcome },
+        { path: '/users', component: Users },
+      ],
+    },
   ],
-});
+})
 
 // 挂载路由导航守卫
 router.beforeEach((to, from, next) => {
@@ -20,11 +33,11 @@ router.beforeEach((to, from, next) => {
   // from代表从哪个路径跳转而来
   // next是一个函数，表示放行
   // 两种调用方式：next() 放行  next('/login') 强制跳转到login
-  if (to.path === "/login") return next();
+  if (to.path === '/login') return next()
   // 获取token
-  const tokenStr = window.sessionStorage.getItem("token");
-  if (!tokenStr) return next("/login");
-  next();
-});
+  const tokenStr = window.sessionStorage.getItem('token')
+  if (!tokenStr) return next('/login')
+  next()
+})
 
-export default router;
+export default router
