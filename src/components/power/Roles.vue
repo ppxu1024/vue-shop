@@ -304,7 +304,7 @@ export default {
             // 如果用户确认删除，则返回值为字符串"confirm"
             // 如果用户取消了删除，则返回值为字符串"cancel"
             // console.log(confirmResult)
-            if (confirmResult != 'confirm') {
+            if (confirmResult !== 'confirm') {
                 return this.$message.info('已取消删除')
             }
             const { data: res } = await this.$http.delete('roles/' + id)

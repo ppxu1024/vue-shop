@@ -28,3 +28,8 @@ body,
 .el-pagination{
     margin-top: 15px;
 }
+
+/* 调整级联选择器的高度 */
+.el-cascader-panel{
+    height: 300px;
+}
