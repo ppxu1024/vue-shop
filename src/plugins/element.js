@@ -31,6 +31,9 @@ import {
   Select,
   Option,
   Cascader,
+  Alert,
+  Tabs,
+  TabPane,
 } from 'element-ui'
 
 Vue.use(Button)
@@ -61,6 +64,9 @@ Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
 Vue.use(Cascader)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)
 // Message需要进行全局挂载,挂载为Vue原型上的一个属性
 // $message是一个自定义属性，可自己更改名字
 Vue.prototype.$message = Message
