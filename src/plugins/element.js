@@ -34,6 +34,11 @@ import {
   Alert,
   Tabs,
   TabPane,
+  Steps,
+  Step,
+  CheckboxGroup,
+  Checkbox,
+  Upload,
 } from 'element-ui'
 
 Vue.use(Button)
@@ -67,6 +72,11 @@ Vue.use(Cascader)
 Vue.use(Alert)
 Vue.use(Tabs)
 Vue.use(TabPane)
+Vue.use(Steps)
+Vue.use(Step)
+Vue.use(CheckboxGroup)
+Vue.use(Checkbox)
+Vue.use(Upload)
 // Message需要进行全局挂载,挂载为Vue原型上的一个属性
 // $message是一个自定义属性，可自己更改名字
 Vue.prototype.$message = Message

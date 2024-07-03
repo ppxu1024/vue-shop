@@ -8,6 +8,8 @@ import Rights from './components/power/Rights.vue'
 import Roles from './components/power/Roles.vue'
 import Cate from './components/goods/Cate.vue'
 import Params from './components/goods/Params.vue'
+import GoodsList from './components/goods/List.vue'
+import Add from './components/goods/Add.vue'
 
 Vue.use(VueRouter)
 
@@ -19,6 +21,7 @@ const router = new VueRouter({
     { path: '/login', component: Login },
     // Welcome嵌套在Home页面中,children[]放子路由
     // 只要访问Home地址，就重定向访问到welcome地址
+    // component指定要渲染的组件
     {
       path: '/home',
       component: Home,
@@ -30,6 +33,8 @@ const router = new VueRouter({
         { path: '/roles', component: Roles },
         { path: '/categories', component: Cate },
         { path: '/params', component: Params },
+        { path: '/goods', component: GoodsList },
+        { path: '/goods/add', component: Add },
       ],
     },
   ],
