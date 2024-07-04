@@ -39,6 +39,8 @@ import {
   CheckboxGroup,
   Checkbox,
   Upload,
+  Timeline,
+  TimelineItem,
 } from 'element-ui'
 
 Vue.use(Button)
@@ -77,6 +79,8 @@ Vue.use(Step)
 Vue.use(CheckboxGroup)
 Vue.use(Checkbox)
 Vue.use(Upload)
+Vue.use(Timeline)
+Vue.use(TimelineItem)
 // Message需要进行全局挂载,挂载为Vue原型上的一个属性
 // $message是一个自定义属性，可自己更改名字
 Vue.prototype.$message = Message

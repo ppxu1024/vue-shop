@@ -15,7 +15,7 @@
             <el-row :gutter="20">
                 <!-- :span="8"代表该列占用长度  -->
                 <el-col :span="8">
-                    <!-- clearable可清空输入框文本,@clear是在点击clearable时出发的事件 -->
+                    <!-- clearable可清空输入框文本,@clear是在点击clearable时触发的事件 -->
                     <el-input placeholder="请输入内容" v-model="queryInfo.query" clearable @clear="getUserList">
                         <el-button slot="append" icon="el-icon-search" @click="getUserList"></el-button>
                     </el-input>
