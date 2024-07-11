@@ -55,8 +55,8 @@
                                     <el-col :span="18">
                                         <!-- 设置closable属性可以定义一个标签是否可移除 -->
                                         <!-- removeRightById(scope.row,item3.id)通过角色id和权限id删除权限函数 -->
-                                        <el-tag type="warning" v-for="(item3,  ) in item2.children" :key="item3.id"
-                                            closable @close="removeRightById(scope.row, item3.id)">
+                                        <el-tag type="warning" v-for="item3 in item2.children" :key="item3.id" closable
+                                            @close="removeRightById(scope.row, item3.id)">
                                             {{ item3.authName }}
                                         </el-tag>
                                     </el-col>
